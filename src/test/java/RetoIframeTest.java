@@ -27,23 +27,23 @@ public class RetoIframeTest {
         webDriver.get("https://automationtesting.co.uk/iframes.html");
 
         //Act
+        //We need to switch to the iframe context to be able to interact with it.
+        webDriver.switchTo().frame(webDriver.findElement(By.xpath("//div/iframe[@src='index.html']")));
 
-        /*WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(10));
-        WebElement toggle1Element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@id='sidebar' and @class='inactive']/a[@href='#sidebar' and @class='toggle']")));
-        toggle1Element.click();*/
-
-        WebElement toggle1Element = webDriver.findElement(By.xpath("//div[@id='sidebar']//a[@class='toggle']"));
+        WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(2));
+        WebElement toggle1Element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@id='sidebar']//a[@class='toggle']")));
         toggle1Element.click();
 
         WebElement accordionLink = webDriver.findElement(new By.ByXPath("//div[@id='sidebar']/descendant::a[@href='accordion.html']"));
         accordionLink.click();
 
-
-        List<WebElement> elementsToggle = webDriver.findElements(new By.ByXPath("//div/[@id='sidebar']/a[@class='toggle']"));
+        //We need to switch back to the main context
+        webDriver.switchTo().defaultContent();
+        List<WebElement> elementsToggle = webDriver.findElements(new By.ByXPath("//div[@id='sidebar']/a[@class='toggle']"));
         elementsToggle.get(0).click();
 
         //Assert
-        WebElement hiddenMenu = webDriver.findElement(new By.ByXPath("div[@id='wrapper']/div[@id='sidebar' and @class='inactive']"));
+        WebElement hiddenMenu = webDriver.findElement(new By.ByXPath("//div[@id='wrapper']/div[@id='sidebar' and @class='inactive']"));
         assert(hiddenMenu.isDisplayed());
     }
 
