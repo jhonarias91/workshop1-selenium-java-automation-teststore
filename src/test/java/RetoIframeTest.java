@@ -55,7 +55,7 @@ public class RetoIframeTest {
     @AfterAll
     public static void tearDown() {
         //having issues with close() as the webdriver is still trying to connect to the browser that was already close.
-        //but using quit() thhis terminates the WebDriver session and avoids connection issue
+        //but using quit() this terminates the WebDriver session and avoids connection issue
         webDriver.quit();
     }
 }

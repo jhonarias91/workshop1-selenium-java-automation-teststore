@@ -1,7 +1,6 @@
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -53,7 +52,6 @@ public class RetoTabTest {
         WebElement googleSearch = webDriver.findElement(new By.ByXPath("//div[@jsname='vdLsw']/parent::*/child::textarea[@name='q' or @class='gLFyf']"));
         googleSearch.sendKeys("Smartphones");
         googleSearch.sendKeys(Keys.ENTER);
-
     }
 
     @AfterAll

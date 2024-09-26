@@ -39,11 +39,11 @@ public class Reto1LoginTest {
         WebElement lastNameElement = webDriver.findElement(new By.ByXPath("//div[contains(@class,'form-group')]/descendant::input[@id='field-lastname' or @name='lastname']"));
         lastNameElement.sendKeys(lastName);
 
-        //create a random email, hard to generate same number
-        Double random = Math.random()*10000;
+        //create a random email
+        final double random = Math.random()*10000;
 
         WebElement emailElement = webDriver.findElement(new By.ByXPath("//div[contains(@class,'form-group')]/descendant::input[@id='field-email' or @name='email']"));
-        emailElement.sendKeys("jhonarias"+random+"@gmail.com");
+        emailElement.sendKeys("jhon.f.arias"+random+"@gmail.com");
 
         WebElement passwordElement = webDriver.findElement(new By.ByXPath("//div[contains(@class,'form-group')]/descendant::input[@id='field-password' or @name='password']"));
         passwordElement.sendKeys("MyPss643*.?");
