@@ -1,7 +1,8 @@
 # Pruebas Automatizadas con Selenium y Java
 =======================================
 
-Este proyecto es un ejemplo de cómo realizar **pruebas automatizadas** utilizando **Selenium WebDriver** con **Java**. Las pruebas están ubicadas en la carpeta `src/test`, y cada una corresponde a un reto específico basado en requisitos proporcionados.
+Este proyecto es un ejemplo de cómo realizar **pruebas automatizadas** utilizando **Selenium WebDriver** con **Java**. 
+Las pruebas están ubicadas en la carpeta `src/test/java`, y cada una corresponde a un reto específico basado en requisitos proporcionados.
 
 ## Lista de Retos y Pruebas
 
@@ -15,7 +16,7 @@ Este proyecto es un ejemplo de cómo realizar **pruebas automatizadas** utilizan
 
 - **Requisitos**: [Reto Iframe](https://drive.google.com/file/d/1HRWggulXQ0GvwsjC0cGK9xJuu3NeTr32/view)
 - **Página web**: [Automation Testing Iframes](https://automationtesting.co.uk/iframes.html)
-- **Archivo de test**: `src/test/RetoIframeTest.java`
+- **Archivo de test**: `RetoIframeTest.java`
 
 ### Reto Alert: Manejo de Alertas
 
